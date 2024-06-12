@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Sistema tipo Sauafi</title>
+  <!-- Incluir Bootstrap para estilos rápidos -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">CRUD Sistema tipo Sauafi</h1>
+    <div class="table-container">
+      <button type="button" class="btn btn-primary mb-3" id="showForm">Agregar Nuevo Registro</button>
+      <form id="userForm" style="display: none;">
+        <input type="hidden" id="userId">
+        <div class="form-group">
+          <label for="matricula">Matrícula</label>
+          <input type="number" class="form-control" id="matricula" required>
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required>
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" class="form-control" id="apellido" required>
+        </div>
+        <div class="form-group">
+          <label for="correo">Correo</label>
+          <input type="email" class="form-control" id="correo" required>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="number" class="form-control" id="telefono" required>
+        </div>
+        <button type="button" class="btn btn-primary" id="inser">Agregar</button>
+      </form>
+      
+      <form id="editForm" style="display: none;">
+        <input type="hidden" id="editUserId">
+        <div class="form-group">
+          <label for="editMatricula">Matrícula</label>
+          <input type="number" class="form-control" id="editMatricula" required>
+        </div>
+        <div class="form-group">
+          <label for="editNombre">Nombre</label>
+          <input type="text" class="form-control" id="editNombre" required>
+        </div>
+        <div class="form-group">
+          <label for="editApellido">Apellido</label>
+          <input type="text" class="form-control" id="editApellido" required>
+        </div>
+        <div class="form-group">
+          <label for="editCorreo">Correo</label>
+          <input type="email" class="form-control" id="editCorreo" required>
+        </div>
+        <div class="form-group">
+          <label for="editTelefono">Teléfono</label>
+          <input type="number" class="form-control" id="editTelefono" required>
+        </div>
+        <button type="button" class="btn btn-success" id="updateUser">Actualizar</button>
+      </form>
+      
+      
+      <input type="text" id="search" class="form-control mb-3" placeholder="Buscar por nombre o apellido">
+      <table class="table table-striped" id="tbUsuarios">
+        <thead>
+          <tr>
+            <th>Matricula</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Teléfono</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody class="listview">
+          <!-- Los usuarios serán listados aquí -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="module" src="funciones.js"></script>
+</body>
+</html>

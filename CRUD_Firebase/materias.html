@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Materias y Usuarios</title>
+  <!-- Incluir Bootstrap para estilos rápidos -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Lista de Materias</h1>
+    <div class="table-container">
+      <table class="table table-striped" id="tbMaterias">
+        <thead>
+          <tr>
+            <th>Grupo</th>
+            <th>Nombre</th>
+            <th>Maestro</th>
+          </tr>
+        </thead>
+        <tbody class="listview">
+          <!-- Las materias serán listadas aquí -->
+        </tbody>
+      </table>
+    </div>
+    <h2 class="text-center">Alumno y Materias Cursadas</h2>
+    <div class="table-container">
+      <table class="table table-striped" id="tbUsuarios">
+        <thead>
+          <tr>
+            <th>Matrícula</th>
+            <th>Nombre</th>
+            <th>Materias Cursadas</th>
+          </tr>
+        </thead>
+        <tbody class="listview">
+          <!-- Los usuarios y sus materias cursadas serán listados aquí -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="module" src="funcionesMaterias.js"></script>
+</body>
+</html>
